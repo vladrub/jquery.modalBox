@@ -1,3 +1,3 @@
 [submodule "Jquery-modalBox"]
 	path = Jquery-modalBox
-	url = git@github.com:vladrub/Jquery-modalBox.git
+	url = https://github.com/vladrub/Jquery-modalBox.git
