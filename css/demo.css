@@ -1,0 +1,84 @@
+/* line 3, ../scss/demo.scss */
+*, *:focus, *:active {
+  outline: 0 !important;
+}
+
+/* sidebar */
+/* line 10, ../scss/demo.scss */
+.bs-docs-sidebar {
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* active & hover links */
+  /* all active links */
+  /* nested active links */
+  /* hide inactive nested list */
+  /* show active nested list */
+}
+/* line 15, ../scss/demo.scss */
+.bs-docs-sidebar .nav > li > a {
+  color: #fff;
+  border-left: 2px solid transparent;
+  padding: 4px 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+/* line 23, ../scss/demo.scss */
+.bs-docs-sidebar .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 15px;
+}
+/* line 31, ../scss/demo.scss */
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+  color: #563d7c;
+  text-decoration: none;
+  background-color: transparent;
+  border-left-color: #563d7c;
+}
+/* line 41, ../scss/demo.scss */
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+  font-weight: 700;
+}
+/* line 47, ../scss/demo.scss */
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+  font-weight: 500;
+}
+/* line 54, ../scss/demo.scss */
+.bs-docs-sidebar .nav ul.nav {
+  display: none;
+}
+/* line 58, ../scss/demo.scss */
+.bs-docs-sidebar .nav > .active > ul.nav {
+  display: block;
+}
+
+/* line 67, ../scss/demo.scss */
+body {
+  color: white;
+  background: #337ab7;
+  font-family: 'Roboto', sans-serif;
+}
+/* line 72, ../scss/demo.scss */
+body header {
+  background: white;
+}
+/* line 76, ../scss/demo.scss */
+body main {
+  font-size: 16px;
+}
+/* line 79, ../scss/demo.scss */
+body main a {
+  color: #fff;
+}
+/* line 80, ../scss/demo.scss */
+body main a:hover {
+  color: #563d7c;
+}
