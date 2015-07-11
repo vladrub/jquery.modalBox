@@ -1,7 +1,8 @@
 $(document).ready(function(){
-    $('body').scrollspy({
-        target: '.bs-docs-sidebar',
-        offset: 40
+    $('#nav').affix({
+        offset: {
+            top: $('#nav').offset().top
+        }
     });
 
     $(function(){
