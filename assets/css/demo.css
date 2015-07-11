@@ -59,7 +59,7 @@
 
 /* line 54, ../scss/demo.scss */
 .qtip-content pre {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 /* line 62, ../scss/demo.scss */
@@ -103,6 +103,6 @@ body main .table > thead > tr > th {
   border-bottom: 2px solid #142f47;
 }
 /* line 95, ../scss/demo.scss */
-body main .table > tr > td {
+body main .table tr > td {
   border: none !important;
 }

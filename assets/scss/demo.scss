@@ -52,7 +52,7 @@
 }
 
 .qtip-content pre {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 // ************************************************************************************
@@ -92,7 +92,7 @@ body {
       border-bottom: 2px solid #142f47;
     }
 
-    .table > tr > td {
+    .table tr > td {
       border: none !important;
     }
   }
