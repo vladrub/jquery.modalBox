@@ -82,3 +82,8 @@ body main a {
 body main a:hover {
   color: #563d7c;
 }
+/* line 82, ../scss/demo.scss */
+body main .prettyprint {
+  background: #142f47;
+  border-color: black;
+}
