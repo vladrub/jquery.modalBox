@@ -10,10 +10,7 @@
             <div class="col-md-9">
                 <section id="howToUse" class="group">
 
-                    <pre class="prettyprint lang-js">
-                        {% capture my_include %}{% include codes/test.html %}{% endcapture %}
-                        {{ my_include | xml_escape }}
-                    </pre>
+                    <pre class="prettyprint lang-html linenums">{% capture my_include %}{% include codes/test.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
 
                     <h1>How to use</h1>
                     <p>Include plugin files:</p>
