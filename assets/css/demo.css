@@ -123,3 +123,14 @@ body main .table > thead > tr > th {
 body main .table tr > td {
   border: none !important;
 }
+/* line 118, ../scss/demo.scss */
+body main section#demo ul {
+  padding: 0;
+  list-style: none;
+}
+/* line 122, ../scss/demo.scss */
+body main section#demo ul li {
+  background: #142f47;
+  padding: 5px;
+  margin-bottom: 10px;
+}
