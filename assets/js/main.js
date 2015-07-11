@@ -54,14 +54,14 @@ $(document).ready(function(){
         window.prettyPrint && prettyPrint()
     });
 
-    $('.modalBox.active').modalBox("open");
+    //$('.modalBox.active').modalBox("open");
 
     $(document).on('click', "a.modal-box.test1", function(e){
         e.preventDefault();
 
         $( $(this).attr("href") ).modalBox("open", {
-            //animationShowEffect: 'lightSpeedIn',
-            //animationHideEffect: 'lightSpeedOut'
+            openAnimationEffect: 'lightSpeedIn',
+            closeAnimationEffect: 'lightSpeedOut'
         });
     });
 
@@ -69,8 +69,8 @@ $(document).ready(function(){
         e.preventDefault();
 
         $( $(this).attr("href") ).modalBox("open", {
-            animationShowEffect: 'rotateIn',
-            animationHideEffect: 'rotateOut'
+            openAnimationEffect: 'rotateIn',
+            closeAnimationEffect: 'rotateOut'
         });
     });
 
@@ -78,8 +78,8 @@ $(document).ready(function(){
         e.preventDefault();
 
         $( $(this).attr("href") ).modalBox("open", {
-            animationShowEffect: 'zoomIn',
-            animationHideEffect: 'zoomOut' // Можно комбинировать
+            openAnimationEffect: 'zoomIn',
+            closeAnimationEffect: 'zoomOut' // Можно комбинировать
         });
     });
 
@@ -87,8 +87,8 @@ $(document).ready(function(){
         e.preventDefault();
 
         $( $(this).attr("href") ).modalBox("open", {
-            animationShowEffect: 'rollIn',
-            animationHideEffect: 'rollOut'
+            openAnimationEffect: 'rollIn',
+            closeAnimationEffect: 'rollOut'
         });
     });
 
