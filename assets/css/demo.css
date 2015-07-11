@@ -85,24 +85,33 @@ body main a {
 body main a:hover {
   color: #563d7c;
 }
-/* line 78, ../scss/demo.scss */
+/* line 80, ../scss/demo.scss */
+body main section h1 span.glyphicon {
+  font-size: 22px;
+  margin-right: 15px;
+}
+/* line 87, ../scss/demo.scss */
+body main section:not(:last-child) {
+  margin-bottom: 60px;
+}
+/* line 89, ../scss/demo.scss */
 body main .prettyprint {
   background: #142f47;
   border-color: black;
 }
-/* line 82, ../scss/demo.scss */
+/* line 93, ../scss/demo.scss */
 body main .prettyprint.linenums {
   box-shadow: 40px 0 0 #000 inset, 41px 0 0 #000 inset;
 }
-/* line 87, ../scss/demo.scss */
+/* line 98, ../scss/demo.scss */
 body main .table-striped > tbody > tr:nth-of-type(2n+1) {
   background-color: #2a6496;
 }
-/* line 91, ../scss/demo.scss */
+/* line 102, ../scss/demo.scss */
 body main .table > thead > tr > th {
   border-bottom: 2px solid #142f47;
 }
-/* line 95, ../scss/demo.scss */
+/* line 106, ../scss/demo.scss */
 body main .table tr > td {
   border: none !important;
 }

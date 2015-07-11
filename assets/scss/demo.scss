@@ -75,6 +75,17 @@ body {
     a { color: #fff; }
     a:hover { color: #563d7c; }
 
+    section {
+      h1 {
+        span.glyphicon {
+          font-size: 22px;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    section:not(:last-child) { margin-bottom: 60px }
+
     .prettyprint {
       background: #142f47;
       border-color: black;
