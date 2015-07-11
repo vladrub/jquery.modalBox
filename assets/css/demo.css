@@ -11,27 +11,35 @@
 }
 
 /* line 15, ../scss/demo.scss */
+.nav a:hover {
+  font-weight: bold !important;
+  background: #2a6496 !important;
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+/* line 22, ../scss/demo.scss */
 .nav .nav {
   display: none;
 }
 
-/* line 19, ../scss/demo.scss */
+/* line 26, ../scss/demo.scss */
 .nav .active .nav {
   display: block;
 }
 
-/* line 23, ../scss/demo.scss */
+/* line 30, ../scss/demo.scss */
 .nav .nav a {
   font-weight: normal;
   font-size: .85em;
 }
 
-/* line 28, ../scss/demo.scss */
+/* line 35, ../scss/demo.scss */
 .nav .nav span {
   margin: 0 5px 0 2px;
 }
 
-/* line 32, ../scss/demo.scss */
+/* line 39, ../scss/demo.scss */
 .nav .nav .active a,
 .nav .nav .active:hover a,
 .nav .nav .active:focus a {
@@ -40,78 +48,78 @@
   border-left: 5px solid black;
 }
 
-/* line 40, ../scss/demo.scss */
+/* line 47, ../scss/demo.scss */
 .nav .nav .active span,
 .nav .nav .active:hover span,
 .nav .nav .active:focus span {
   display: none;
 }
 
-/* line 46, ../scss/demo.scss */
+/* line 53, ../scss/demo.scss */
 .affix {
   top: 0;
 }
 
-/* line 50, ../scss/demo.scss */
+/* line 57, ../scss/demo.scss */
 #nav {
   width: 213px;
 }
 
-/* line 54, ../scss/demo.scss */
+/* line 61, ../scss/demo.scss */
 .qtip-content pre {
   margin-bottom: 0 !important;
 }
 
-/* line 62, ../scss/demo.scss */
+/* line 69, ../scss/demo.scss */
 body {
   color: white;
   background: #337ab7;
   font-family: 'Roboto', sans-serif;
   position: relative;
 }
-/* line 68, ../scss/demo.scss */
+/* line 75, ../scss/demo.scss */
 body header {
   background: white;
 }
-/* line 72, ../scss/demo.scss */
+/* line 79, ../scss/demo.scss */
 body main {
   font-size: 16px;
 }
-/* line 75, ../scss/demo.scss */
+/* line 82, ../scss/demo.scss */
 body main a {
   color: #fff;
 }
-/* line 76, ../scss/demo.scss */
+/* line 83, ../scss/demo.scss */
 body main a:hover {
   color: #563d7c;
 }
-/* line 80, ../scss/demo.scss */
+/* line 87, ../scss/demo.scss */
 body main section h1 span.glyphicon {
   font-size: 22px;
   margin-right: 15px;
 }
-/* line 87, ../scss/demo.scss */
+/* line 94, ../scss/demo.scss */
 body main section:not(:last-child) {
   margin-bottom: 60px;
 }
-/* line 89, ../scss/demo.scss */
+/* line 96, ../scss/demo.scss */
 body main .prettyprint {
   background: #142f47;
   border-color: black;
 }
-/* line 93, ../scss/demo.scss */
+/* line 100, ../scss/demo.scss */
 body main .prettyprint.linenums {
   box-shadow: 40px 0 0 #000 inset, 41px 0 0 #000 inset;
 }
-/* line 98, ../scss/demo.scss */
+/* line 105, ../scss/demo.scss */
 body main .table-striped > tbody > tr:nth-of-type(2n+1) {
   background-color: #2a6496;
 }
-/* line 102, ../scss/demo.scss */
+/* line 109, ../scss/demo.scss */
 body main .table > thead > tr > th {
   border-bottom: 2px solid #142f47;
 }
-/* line 106, ../scss/demo.scss */
+/* line 113, ../scss/demo.scss */
 body main .table tr > td {
   border: none !important;
 }
