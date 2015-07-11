@@ -45,6 +45,11 @@ $(document).ready(function(){
         style: { classes: 'qtip-bootstrap' }
     });
 
+    $('.scroll-to').click(function(e){
+        e.preventDefault();
+        $(window).scrollTo($(this).attr('href'), 600);
+    });
+
     $(function(){
         window.prettyPrint && prettyPrint()
     });
