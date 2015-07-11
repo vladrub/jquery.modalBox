@@ -84,6 +84,59 @@
                     </table>
                 </section>
 
+                <section id="events">
+                    <h1>Events</h1>
+
+                    <table class="table table-striped table-popover">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="tip">
+                            <td>
+                                beforeOpen
+                                <div class="hidden">
+                                    <pre class="prettyprint lang-js">{% capture my_include %}{% include codes/events/beforeOpen.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
+                                </div>
+                            </td>
+                            <td>Before open modal</td>
+                        </tr>
+                        <tr class="tip">
+                            <td>
+                                afterOpen
+                                <div class="hidden">
+                                    <pre class="prettyprint lang-js">{% capture my_include %}{% include codes/events/afterOpen.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
+                                </div>
+                            </td>
+                            <td>After open modal</td>
+                        </tr>
+
+
+                        <tr class="tip">
+                            <td>
+                                beforeClose
+                                <div class="hidden">
+                                    <pre class="prettyprint lang-js">{% capture my_include %}{% include codes/events/beforeClose.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
+                                </div>
+                            </td>
+                            <td>Before close modal</td>
+                        </tr>
+                        <tr class="tip">
+                            <td>
+                                afterClose
+                                <div class="hidden">
+                                    <pre class="prettyprint lang-js">{% capture my_include %}{% include codes/events/afterClose.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
+                                </div>
+                            </td>
+                            <td>After close modal</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+
                 <section id="methods">
                     <h1>Methods</h1>
 
@@ -118,10 +171,6 @@
                         </tr>
                         </tbody>
                     </table>
-                </section>
-
-                <section id="events">
-                    <h4>Group A Sub 2</h4>
                 </section>
             </div>
         </div>
