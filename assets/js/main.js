@@ -5,6 +5,26 @@ $(document).ready(function(){
         }
     });
 
+    $('.tip').qtip({
+        show: {
+            solo: true
+        },
+        hide: 'unfocus',
+        content: {
+            text: function(){
+                return $(this).siblings('div.hidden').html();
+            },
+            title: 'Example:'
+        },
+        position: {
+            my: 'center right',
+            at: 'center left',
+            viewport: true,
+            adjust: { x: -5 }
+        },
+        style: { classes: 'qtip-bootstrap' }
+    });
+
     $(function(){
         window.prettyPrint && prettyPrint()
     });

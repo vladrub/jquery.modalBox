@@ -57,47 +57,52 @@
   width: 213px;
 }
 
-/* line 58, ../scss/demo.scss */
+/* line 54, ../scss/demo.scss */
+.qtip-content pre {
+  margin-bottom: 0;
+}
+
+/* line 62, ../scss/demo.scss */
 body {
   color: white;
   background: #337ab7;
   font-family: 'Roboto', sans-serif;
   position: relative;
 }
-/* line 64, ../scss/demo.scss */
+/* line 68, ../scss/demo.scss */
 body header {
   background: white;
 }
-/* line 68, ../scss/demo.scss */
+/* line 72, ../scss/demo.scss */
 body main {
   font-size: 16px;
 }
-/* line 71, ../scss/demo.scss */
+/* line 75, ../scss/demo.scss */
 body main a {
   color: #fff;
 }
-/* line 72, ../scss/demo.scss */
+/* line 76, ../scss/demo.scss */
 body main a:hover {
   color: #563d7c;
 }
-/* line 74, ../scss/demo.scss */
+/* line 78, ../scss/demo.scss */
 body main .prettyprint {
   background: #142f47;
   border-color: black;
 }
-/* line 78, ../scss/demo.scss */
+/* line 82, ../scss/demo.scss */
 body main .prettyprint.linenums {
   box-shadow: 40px 0 0 #000 inset, 41px 0 0 #000 inset;
 }
-/* line 83, ../scss/demo.scss */
+/* line 87, ../scss/demo.scss */
 body main .table-striped > tbody > tr:nth-of-type(2n+1) {
   background-color: #2a6496;
 }
-/* line 87, ../scss/demo.scss */
+/* line 91, ../scss/demo.scss */
 body main .table > thead > tr > th {
   border-bottom: 2px solid #142f47;
 }
-/* line 91, ../scss/demo.scss */
-body main .table > thead > tr > td {
+/* line 95, ../scss/demo.scss */
+body main .table > tr > td {
   border: none;
 }

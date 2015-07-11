@@ -8,7 +8,7 @@
             </div>
 
             <div class="col-md-9">
-                <section id="howToUse" class="group">
+                <section id="howToUse">
 
                     <h1>How to use</h1>
                     <p>Include plugin files:</p>
@@ -23,74 +23,105 @@
 
                     <p>Call the plugin when the body is on load:</p>
                     <pre class="prettyprint lang-js linenums">{% capture my_include %}{% include codes/callPlugin.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
+                </section>
 
-                    <div id="options" class="subgroup">
-                        <h1>Options</h1>
+                <section id="options">
+                    <h1>Options</h1>
 
-                        <table class="table table-striped table-popover">
-                            <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Type</th>
-                                <th>Property</th>
-                                <th>Description</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>openAnimationDuration</td>
-                                <td>number</td>
-                                <td>500</td>
-                                <td>Set animation duration when opening modal</td>
-                            </tr>
-                            <tr>
-                                <td>closeAnimationDuration</td>
-                                <td>number</td>
-                                <td>500</td>
-                                <td>Set animation duration when closing modal</td>
-                            </tr>
-                            <tr>
-                                <td>animationOpenEffect</td>
-                                <td>string</td>
-                                <td>default-in</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>animationCloseEffect</td>
-                                <td>string</td>
-                                <td>default-out</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>closeOnEscape</td>
-                                <td>boolean</td>
-                                <td>true</td>
-                                <td>Allows the user to close the modal when press escape key.</td>
-                            </tr>
-                            <tr>
-                                <td>autoClose</td>
-                                <td>boolean</td>
-                                <td>false</td>
-                                <td>Automatically close modal window.</td>
-                            </tr>
-                            <tr>
-                                <td>autoCloseDelay</td>
-                                <td>number</td>
-                                <td>3000</td>
-                                <td>Automatically close delay.</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table class="table table-striped table-popover">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>openAnimationDuration</td>
+                            <td>number</td>
+                            <td>500</td>
+                            <td>Set animation duration when opening modal</td>
+                        </tr>
+                        <tr>
+                            <td>closeAnimationDuration</td>
+                            <td>number</td>
+                            <td>500</td>
+                            <td>Set animation duration when closing modal</td>
+                        </tr>
+                        <tr>
+                            <td>animationOpenEffect</td>
+                            <td>string</td>
+                            <td>default-in</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>animationCloseEffect</td>
+                            <td>string</td>
+                            <td>default-out</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>closeOnEscape</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Allows the user to close the modal when press escape key.</td>
+                        </tr>
+                        <tr>
+                            <td>autoClose</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Automatically close modal window.</td>
+                        </tr>
+                        <tr>
+                            <td>autoCloseDelay</td>
+                            <td>number</td>
+                            <td>3000</td>
+                            <td>Automatically close delay.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
 
-                    <div id="methods" class="subgroup">
-                        <h4>Group A Sub 2</h4>
-                    </div>
+                <section id="methods">
+                    <h1>Methods</h1>
 
-                    <div id="events" class="subgroup">
-                        <h4>Group A Sub 2</h4>
-                    </div>
+                    <p>Accessing the API</p>
+                    <pre class="prettyprint lang-js linenums">{% capture my_include %}{% include codes/api.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
 
+                    <table class="table table-striped table-popover">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="tip">open</div>
+                                <div class="hidden">
+                                    <pre class="prettyprint lang-js linenums">{% capture my_include %}{% include codes/apiOpen.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
+                                </div>
+                            </td>
+                            <td>Open modal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tip">close</div>
+                                <div class="hidden">
+                                    <pre class="prettyprint lang-js linenums">{% capture my_include %}{% include codes/apiClose.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
+                                </div>
+                            </td>
+                            <td>Close modal</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="events">
+                    <h4>Group A Sub 2</h4>
                 </section>
             </div>
         </div>

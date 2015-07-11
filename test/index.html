@@ -11,6 +11,8 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../assets/css/prettify.css" />
 
+    <link rel="stylesheet" href="../assets/css/jquery.qtip.min.css" />
+
     <link rel="stylesheet" href="../Jquery-modalBox/jquery.modalBox.css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
 </head>
@@ -147,13 +149,23 @@ $('a.modal-box').click(function(e){
                                </thead>
                                <tbody>
                                <tr>
-                                   <td>openAnimationDuration</td>
+                                   <td>
+                                        <div class="tip">openAnimationDuration</div>
+                                        <div class="hidden">
+
+                                            <pre class="prettyprint lang-html">
+&lt;a href=&quot;#modal-box&quot; class=&quot;modal-box&quot;&gt;Show modal&lt;/a&gt;</pre>
+                                        </div>
+                                   </td>
                                    <td>number</td>
                                    <td>500</td>
                                    <td>Set animation duration when opening modal</td>
                                </tr>
                                <tr>
-                                   <td>closeAnimationDuration</td>
+                                   <td>
+                                       <div class="tip">closeAnimationDuration</div>
+                                       <div class="hidden">123</div>
+                                   </td>
                                    <td>number</td>
                                    <td>500</td>
                                    <td>Set animation duration when closing modal</td>
@@ -331,6 +343,7 @@ $('a.modal-box').click(function(e){
 
 
     <script src="../assets/js/vendors/jquery-scrollspy.js"></script>
+    <script src="../assets/js/vendors/jquery.qtip.min.js"></script>
 
     <script src="../Jquery-modalBox/jquery.modalBox.js"></script>
     <script src="../assets/js/main.js"></script>
