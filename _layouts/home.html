@@ -10,37 +10,19 @@
             <div class="col-md-9">
                 <section id="howToUse" class="group">
 
-                    <pre class="prettyprint lang-html linenums">{% capture my_include %}{% include codes/test.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
-
                     <h1>How to use</h1>
                     <p>Include plugin files:</p>
 
-                       <pre class="prettyprint lang-html linenums">
-&lt;link href=&quot;../dist/css/jquery.modalBox.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;script src=&quot;../dist/js/jquery.modalBox.js&quot;&gt;&lt;/script&gt;</pre>
+                    <pre class="prettyprint lang-html linenums">{% capture my_include %}{% include codes/includeFiles.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
 
                     <p>Add modal  after <code>&lt;body&gt</code> tag:</p>
+                    <pre class="prettyprint lang-html linenums">{% capture my_include %}{% include codes/modal.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
 
-                       <pre class="prettyprint lang-html linenums">
-&lt;div class=&quot;modal-box&quot; id=&quot;demo&quot;&gt;
-    &lt;div class=&quot;inner&quot;&gt;
-        &lt;button class=&quot;close&quot;&gt;&amp;times;&lt;/button&gt;
-        Content
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
                     <p>Show modal button:</p>
-
-                       <pre class="prettyprint lang-html linenums">
-&lt;a href=&quot;#modal-box&quot; class=&quot;modal-box&quot;&gt;Show modal&lt;/a&gt;</pre>
+                    <pre class="prettyprint lang-html linenums">{% capture my_include %}{% include codes/button.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
 
                     <p>Call the plugin when the body is on load:</p>
-                       <pre class="prettyprint lang-js linenums">
-$('a.modal-box').click(function(e){
-    e.preventDefault();
-    $( $(this).attr("href") ).modalBox("open");
-});</pre>
-
-
+                    <pre class="prettyprint lang-js linenums">{% capture my_include %}{% include codes/callPlugin.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
 
                     <div id="options" class="subgroup">
                         <h1>Options</h1>
