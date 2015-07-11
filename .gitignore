@@ -1,2 +1,5 @@
-# Created by .gitignore support plugin (hsz.mobi)
+.DS_Store
+.sass-cache
+.bundle
+_site
 .idea
