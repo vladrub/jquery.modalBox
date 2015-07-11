@@ -8,6 +8,13 @@
             </div>
 
             <div class="col-md-9">
+                <section id="demo">
+                    <a href="#first" class="modal-box test1">Open modal-box 1</a>
+                    <a href="#first2" class="modal-box test2">Open modal-box 2</a>
+                    <a href="#first3" class="modal-box test3">Open modal-box 3</a>
+                    <a href="#first4" class="modal-box test4">Open modal-box 4</a>
+                </section>
+
                 <section id="howToUse">
 
                     <h1>How to use</h1>
@@ -86,6 +93,8 @@
 
                 <section id="events">
                     <h1>Events</h1>
+
+                    <pre class="prettyprint lang-js linenums">{% capture my_include %}{% include codes/events/howTo.html %}{% endcapture %}{{ my_include | xml_escape }}</pre>
 
                     <table class="table table-striped table-popover">
                         <thead>
@@ -174,10 +183,6 @@
                 </section>
             </div>
         </div>
-        <a href="#first" class="modal-box test1">Open modal-box 1</a>
-        <a href="#first2" class="modal-box test2">Open modal-box 2</a>
-        <a href="#first3" class="modal-box test3">Open modal-box 3</a>
-        <a href="#first4" class="modal-box test4">Open modal-box 4</a>
     </div>
 </main>
 
