@@ -58,7 +58,7 @@
             app.transitionDuration(app.$el, app.options.openAnimationDuration);
             app.animationDuration($('.inner', app.$el), app.options.openAnimationDuration);
 
-            app.animate(app.options.animationOpenEffect, function(){
+            app.animate(app.options.openAnimationEffect, function(){
                 app.$el.trigger( "modalBox:afterOpen", app );
                 $(app.$el).focus();
             });
@@ -72,7 +72,7 @@
             app.transitionDuration(app.$el, app.options.closeAnimationDuration);
             app.animationDuration($('.inner', app.$el), app.options.closeAnimationDuration);
 
-            app.animate(app.options.animationCloseEffect, function(){
+            app.animate(app.options.closeAnimationEffect, function(){
                 app.resetScrollBar();
                 app.$body.removeClass("modal-box-open");
 
@@ -160,8 +160,8 @@
     $.modalBox.defaultOptions = {
         openAnimationDuration: 500,
         closeAnimationDuration: 500,
-        animationOpenEffect: 'default-in',
-        animationCloseEffect: 'default-out',
+        openAnimationEffect: 'default-in',
+        closeAnimationEffect: 'default-out',
         closeOnEscape: true,
         autoClose: false,
         autoCloseDelay: 3000
