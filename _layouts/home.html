@@ -10,7 +10,10 @@
             <div class="col-md-9">
                 <section id="howToUse" class="group">
 
-                    {% highlight html linenos %}{% include codes/test.txt %}{% endhighlight %}
+                    <pre class="prettyprint lang-js">
+                        {% capture my_include %}{% include codes/test.txt %}{% endcapture %}
+                        {{ my_include | xml_escape }}
+                    </pre>
 
                     <h1>How to use</h1>
                     <p>Include plugin files:</p>
