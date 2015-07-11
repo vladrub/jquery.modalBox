@@ -5,7 +5,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.tip').qtip({
+    $('div.tip').qtip({
         show: {
             solo: true
         },
@@ -13,6 +13,26 @@ $(document).ready(function(){
         content: {
             text: function(){
                 return $(this).siblings('div.hidden').html();
+            },
+            title: 'Example:'
+        },
+        position: {
+            my: 'center right',
+            at: 'center left',
+            viewport: true,
+            adjust: { x: -5 }
+        },
+        style: { classes: 'qtip-bootstrap' }
+    });
+
+    $('tr.tip').qtip({
+        show: {
+            solo: true
+        },
+        hide: 'unfocus',
+        content: {
+            text: function(){
+                return $(this).find('div.hidden').html();
             },
             title: 'Example:'
         },
