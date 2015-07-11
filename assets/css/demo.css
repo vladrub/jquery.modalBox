@@ -87,3 +87,7 @@ body main .prettyprint {
   background: #142f47;
   border-color: black;
 }
+/* line 86, ../scss/demo.scss */
+body main .prettyprint.linenums {
+  box-shadow: 40px 0 0 #000 inset, 41px 0 0 #000 inset;
+}
