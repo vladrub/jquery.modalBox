@@ -82,6 +82,10 @@ body {
     .prettyprint {
       background: #142f47;
       border-color: black;
+
+      &.linenums {
+        box-shadow: 40px 0 0 #000 inset, 41px 0 0 #000 inset;
+      }
     }
   }
 }
