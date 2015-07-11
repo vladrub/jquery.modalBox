@@ -91,3 +91,11 @@ body main .prettyprint {
 body main .prettyprint.linenums {
   box-shadow: 40px 0 0 #000 inset, 41px 0 0 #000 inset;
 }
+/* line 91, ../scss/demo.scss */
+body main .table-striped > tbody > tr:nth-of-type(2n+1) {
+  background-color: #2a6496;
+}
+/* line 95, ../scss/demo.scss */
+body main .table > thead > tr > th {
+  border-bottom: 2px solid #142f47;
+}
