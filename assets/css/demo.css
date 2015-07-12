@@ -70,64 +70,69 @@
   margin-bottom: 0 !important;
 }
 
-/* line 69, ../scss/demo.scss */
+/* line 66, ../scss/demo.scss */
+.modal-box .prettyprint {
+  margin-bottom: 0 !important;
+}
+
+/* line 75, ../scss/demo.scss */
 body {
   color: white;
   background: #337ab7;
   font-family: 'Roboto', sans-serif;
   position: relative;
 }
-/* line 75, ../scss/demo.scss */
+/* line 81, ../scss/demo.scss */
 body header {
   background: white;
 }
-/* line 79, ../scss/demo.scss */
+/* line 85, ../scss/demo.scss */
 body main {
   font-size: 16px;
 }
-/* line 82, ../scss/demo.scss */
+/* line 88, ../scss/demo.scss */
 body main a {
   color: #fff;
 }
-/* line 83, ../scss/demo.scss */
+/* line 89, ../scss/demo.scss */
 body main a:hover {
   color: #563d7c;
 }
-/* line 87, ../scss/demo.scss */
+/* line 93, ../scss/demo.scss */
 body main section h1 span.glyphicon {
   font-size: 22px;
   margin-right: 15px;
 }
-/* line 94, ../scss/demo.scss */
+/* line 100, ../scss/demo.scss */
 body main section:not(:last-child) {
   margin-bottom: 60px;
 }
-/* line 96, ../scss/demo.scss */
+/* line 102, ../scss/demo.scss */
 body main .prettyprint {
   background: #142f47;
   border-color: black;
 }
-/* line 100, ../scss/demo.scss */
+/* line 106, ../scss/demo.scss */
 body main .prettyprint.linenums {
   box-shadow: 40px 0 0 #000 inset, 41px 0 0 #000 inset;
 }
-/* line 105, ../scss/demo.scss */
+/* line 111, ../scss/demo.scss */
 body main .table-striped > tbody > tr:nth-of-type(2n+1) {
   background-color: #2a6496;
 }
-/* line 109, ../scss/demo.scss */
+/* line 115, ../scss/demo.scss */
 body main .table > thead > tr > th {
   border-bottom: 2px solid #142f47;
 }
-/* line 113, ../scss/demo.scss */
+/* line 119, ../scss/demo.scss */
 body main .table tr > td {
   border: none !important;
 }
-/* line 118, ../scss/demo.scss */
+/* line 124, ../scss/demo.scss */
 body main section#demo p {
   margin: 0;
 }
-/* line 120, ../scss/demo.scss */
+/* line 126, ../scss/demo.scss */
 body main section#demo p a {
   background: #142f47;
   margin-bottom: 10px;
@@ -135,17 +140,17 @@ body main section#demo p a {
   padding: 5px;
   margin-right: 10px;
 }
-/* line 127, ../scss/demo.scss */
+/* line 133, ../scss/demo.scss */
 body main section#demo p a:hover {
   color: white;
   text-decoration: underline;
 }
-/* line 134, ../scss/demo.scss */
+/* line 140, ../scss/demo.scss */
 body main section#demo ul {
   padding: 0;
   list-style: none;
 }
-/* line 138, ../scss/demo.scss */
+/* line 144, ../scss/demo.scss */
 body main section#demo ul li {
   background: #142f47;
   padding: 5px;

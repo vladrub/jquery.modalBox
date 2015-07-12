@@ -69,8 +69,18 @@ $(document).ready(function(){
             api.options.openAnimationDuration = 500;
             api.options.closeAnimationDuration = 500;
         }
+
         api.options.openAnimationEffect = $(this).data('animation-open');
         api.options.closeAnimationEffect = $(this).data('animation-close');
+
+        var text = $( $(this).attr("href") ).find('.hidden').html();
+        text = text.replace("___1___", api.options.openAnimationEffect);
+        text = text.replace("___2___", api.options.closeAnimationEffect);
+        console.log(text);
+
+        $( $(this).attr("href") ).find('.prettyprint').html(text);
+        prettyPrint();
+
         api.open();
     });
 });
