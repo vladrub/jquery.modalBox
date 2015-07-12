@@ -13,7 +13,7 @@ main {
     background: #2a6496;
   }
 
-  .nav a:hover {
+  .nav a:hover, .nav a:focus {
     font-weight: bold !important;
     background: #2a6496 !important;
     color: white !important;
