@@ -68,6 +68,22 @@
   }
 }
 
+.nav .btn {
+  background-color: #142f47;
+  margin-top: 30px;
+
+  color: white;
+
+  i { margin-right: 5px; }
+
+  &:hover, &:focus {
+    color: white;
+    background-color: lighten(#142f47, 10) !important;
+    text-decoration: none !important;
+    font-size: 13.5px !important;
+  }
+}
+
 // ************************************************************************************
 // CONTENT
 // ************************************************************************************

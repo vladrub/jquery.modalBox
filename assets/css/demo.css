@@ -75,64 +75,82 @@
   margin-bottom: 0 !important;
 }
 
-/* line 75, ../scss/demo.scss */
+/* line 71, ../scss/demo.scss */
+.nav .btn {
+  background-color: #142f47;
+  margin-top: 30px;
+  color: white;
+}
+/* line 77, ../scss/demo.scss */
+.nav .btn i {
+  margin-right: 5px;
+}
+/* line 79, ../scss/demo.scss */
+.nav .btn:hover, .nav .btn:focus {
+  color: white;
+  background-color: #1f496f !important;
+  text-decoration: none !important;
+  font-size: 13.5px !important;
+}
+
+/* line 91, ../scss/demo.scss */
 body {
   color: white;
   background: #337ab7;
   font-family: 'Roboto', sans-serif;
   position: relative;
 }
-/* line 81, ../scss/demo.scss */
+/* line 97, ../scss/demo.scss */
 body header {
   background: white;
 }
-/* line 85, ../scss/demo.scss */
+/* line 101, ../scss/demo.scss */
 body main {
   font-size: 16px;
 }
-/* line 88, ../scss/demo.scss */
+/* line 104, ../scss/demo.scss */
 body main a {
   color: #fff;
 }
-/* line 89, ../scss/demo.scss */
+/* line 105, ../scss/demo.scss */
 body main a:hover {
   color: #563d7c;
 }
-/* line 93, ../scss/demo.scss */
+/* line 109, ../scss/demo.scss */
 body main section h1 span.glyphicon {
   font-size: 22px;
   margin-right: 15px;
 }
-/* line 100, ../scss/demo.scss */
+/* line 116, ../scss/demo.scss */
 body main section:not(:last-child) {
   margin-bottom: 60px;
 }
-/* line 102, ../scss/demo.scss */
+/* line 118, ../scss/demo.scss */
 body main .prettyprint {
   background: #142f47;
   border-color: black;
 }
-/* line 106, ../scss/demo.scss */
+/* line 122, ../scss/demo.scss */
 body main .prettyprint.linenums {
   box-shadow: 40px 0 0 #000 inset, 41px 0 0 #000 inset;
 }
-/* line 111, ../scss/demo.scss */
+/* line 127, ../scss/demo.scss */
 body main .table-striped > tbody > tr:nth-of-type(2n+1) {
   background-color: #2a6496;
 }
-/* line 115, ../scss/demo.scss */
+/* line 131, ../scss/demo.scss */
 body main .table > thead > tr > th {
   border-bottom: 2px solid #142f47;
 }
-/* line 119, ../scss/demo.scss */
+/* line 135, ../scss/demo.scss */
 body main .table tr > td {
   border: none !important;
 }
-/* line 124, ../scss/demo.scss */
+/* line 140, ../scss/demo.scss */
 body main section#demo p {
   margin: 0;
 }
-/* line 126, ../scss/demo.scss */
+/* line 142, ../scss/demo.scss */
 body main section#demo p a {
   background: #142f47;
   margin-bottom: 10px;
@@ -140,17 +158,17 @@ body main section#demo p a {
   padding: 5px;
   margin-right: 10px;
 }
-/* line 133, ../scss/demo.scss */
+/* line 149, ../scss/demo.scss */
 body main section#demo p a:hover {
   color: white;
   text-decoration: underline;
 }
-/* line 140, ../scss/demo.scss */
+/* line 156, ../scss/demo.scss */
 body main section#demo ul {
   padding: 0;
   list-style: none;
 }
-/* line 144, ../scss/demo.scss */
+/* line 160, ../scss/demo.scss */
 body main section#demo ul li {
   background: #142f47;
   padding: 5px;
