@@ -124,11 +124,28 @@ body main .table tr > td {
   border: none !important;
 }
 /* line 118, ../scss/demo.scss */
+body main section#demo p {
+  margin: 0;
+}
+/* line 120, ../scss/demo.scss */
+body main section#demo p a {
+  background: #142f47;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 5px;
+  margin-right: 10px;
+}
+/* line 127, ../scss/demo.scss */
+body main section#demo p a:hover {
+  color: white;
+  text-decoration: underline;
+}
+/* line 134, ../scss/demo.scss */
 body main section#demo ul {
   padding: 0;
   list-style: none;
 }
-/* line 122, ../scss/demo.scss */
+/* line 138, ../scss/demo.scss */
 body main section#demo ul li {
   background: #142f47;
   padding: 5px;

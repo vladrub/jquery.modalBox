@@ -115,6 +115,22 @@ body {
     }
 
     section#demo {
+      p {
+        margin: 0;
+        a {
+          background: #142f47;
+          margin-bottom: 10px;
+          display: inline-block;
+          padding: 5px;
+          margin-right: 10px;
+
+          &:hover {
+            color: white;
+            text-decoration: underline;
+          }
+        }
+      }
+
       ul {
         padding: 0;
         list-style: none;

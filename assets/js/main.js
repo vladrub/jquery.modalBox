@@ -54,42 +54,23 @@ $(document).ready(function(){
         window.prettyPrint && prettyPrint()
     });
 
-    //$('.modalBox.active').modalBox("open");
+    $('div.modal-box').modalBox();
+    $('div.modalBox.active').modalBox("open");
 
-    $(document).on('click', "a.modal-box.test1", function(e){
+    $(document).on('click', "a.modal-box", function(e){
         e.preventDefault();
 
-        $( $(this).attr("href") ).modalBox("open", {
-            openAnimationEffect: 'lightSpeedIn',
-            closeAnimationEffect: 'lightSpeedOut'
-        });
+        var api = $( $(this).attr("href") ).data('modalBox');
+
+        if ( $(this).data('animation-open-duration') ) {
+            api.options.openAnimationDuration = $(this).data('animation-open-duration');
+            api.options.closeAnimationDuration = $(this).data('animation-close-duration');
+        } else {
+            api.options.openAnimationDuration = 500;
+            api.options.closeAnimationDuration = 500;
+        }
+        api.options.openAnimationEffect = $(this).data('animation-open');
+        api.options.closeAnimationEffect = $(this).data('animation-close');
+        api.open();
     });
-
-    $(document).on('click', "a.modal-box.test2", function(e){
-        e.preventDefault();
-
-        $( $(this).attr("href") ).modalBox("open", {
-            openAnimationEffect: 'rotateIn',
-            closeAnimationEffect: 'rotateOut'
-        });
-    });
-
-    $(document).on('click', "a.modal-box.test3", function(e){
-        e.preventDefault();
-
-        $( $(this).attr("href") ).modalBox("open", {
-            openAnimationEffect: 'zoomIn',
-            closeAnimationEffect: 'zoomOut' // Можно комбинировать
-        });
-    });
-
-    $(document).on('click', "a.modal-box.test4", function(e){
-        e.preventDefault();
-
-        $( $(this).attr("href") ).modalBox("open", {
-            openAnimationEffect: 'rollIn',
-            closeAnimationEffect: 'rollOut'
-        });
-    });
-
 });
