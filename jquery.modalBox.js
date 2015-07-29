@@ -30,6 +30,8 @@
                 app.close();
             });
 
+            app.hasCssTransitionSupport = app.detectCSSFeature("transition");
+
             // SCROLLBAR
             app.originalBodyPad = '';
 
@@ -53,31 +55,51 @@
             // SET Z-INDEX
             app.$el.css( 'z-index', app.getZIndex() );
 
-            app.$el.addClass("active");
+            if ( app.hasCssTransitionSupport ) {
+                app.$el.addClass("active");
 
-            app.transitionDuration(app.$el, app.options.openAnimationDuration);
-            app.animationDuration($('.inner', app.$el), app.options.openAnimationDuration);
+                app.transitionDuration(app.$el, app.options.openAnimationDuration);
+                app.animationDuration($('.inner', app.$el), app.options.openAnimationDuration);
 
-            app.animate(app.options.openAnimationEffect, function(){
-                app.$el.trigger( "modalBox:afterOpen", app );
-                $(app.$el).focus();
-            });
+                app.animate(app.options.openAnimationEffect, function(){
+                    app.$el.trigger( "modalBox:afterOpen", app );
+                    app.$el.focus();
+                });
+            } else {
+                app.$el.stop(true, false)
+                    .addClass("active").fadeOut(0)
+                    .fadeIn( app.options.openAnimationDuration, function () {
+                        app.$el.trigger( "modalBox:afterOpen", app );
+                        app.$el.focus();
+                    });
+            }
         };
 
         app.close = function() {
             app.$el.trigger( "modalBox:beforeClose", app );
 
-            app.$el.removeClass("active");
+            if ( app.hasCssTransitionSupport ) {
+                app.$el.removeClass("active");
 
-            app.transitionDuration(app.$el, app.options.closeAnimationDuration);
-            app.animationDuration($('.inner', app.$el), app.options.closeAnimationDuration);
+                app.transitionDuration(app.$el, app.options.closeAnimationDuration);
+                app.animationDuration($('.inner', app.$el), app.options.closeAnimationDuration);
 
-            app.animate(app.options.closeAnimationEffect, function(){
-                app.resetScrollBar();
-                app.$body.removeClass("modal-box-open");
+                app.animate(app.options.closeAnimationEffect, function(){
+                    app.resetScrollBar();
+                    app.$body.removeClass("modal-box-open");
 
-                app.$el.trigger( "modalBox:afterClose", app );
-            });
+                    app.$el.trigger( "modalBox:afterClose", app );
+                });
+            } else {
+                app.$el.stop(true, false).fadeOut( app.options.closeAnimationDuration, function (){
+                    app.$el.removeClass("active");
+
+                    app.resetScrollBar();
+                    app.$body.removeClass("modal-box-open");
+
+                    app.$el.trigger( "modalBox:afterClose", app );
+                });
+            }
         };
 
         app.animate = function(effect, callback) {
@@ -136,6 +158,28 @@
             });
 
             return zIndex+1;
+        };
+
+        app.detectCSSFeature = function(featurename) {
+            var feature = false,
+                domPrefixes = 'Webkit Moz ms O'.split(' '),
+                elm = document.createElement('div'),
+                featurenameCapital = null;
+
+            featurename = featurename.toLowerCase();
+
+            if( elm.style[featurename] !== undefined ) { feature = true; }
+
+            if( feature === false ) {
+                featurenameCapital = featurename.charAt(0).toUpperCase() + featurename.substr(1);
+                for( var i = 0; i < domPrefixes.length; i++ ) {
+                    if( elm.style[domPrefixes[i] + featurenameCapital ] !== undefined ) {
+                        feature = true;
+                        break;
+                    }
+                }
+            }
+            return feature;
         };
 
         var target = app.$el.data().modalBox;
