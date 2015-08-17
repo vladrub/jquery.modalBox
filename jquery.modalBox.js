@@ -88,6 +88,8 @@
                     app.resetScrollBar();
                     app.$body.removeClass("modal-box-open");
 
+                    app.$el.css( 'z-index', -1 );
+
                     app.$el.trigger( "modalBox:afterClose", app );
                 });
             } else {
