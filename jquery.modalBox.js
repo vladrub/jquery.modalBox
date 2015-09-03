@@ -1,5 +1,7 @@
 ﻿/*
- * Jquery plugins collection: modalBox plugin
+ * Jquery modalBox plugin
+ * https://github.com/vladrub/jquery.modalBox
+ *
  * Author: Vladislav Rubanovich
  * Licensed under the MIT license
  */
@@ -33,10 +35,10 @@
             app.hasCssTransitionSupport = app.detectCSSFeature("transition");
 
             // SCROLLBAR
-            app.originalBodyPad = '';
+            app.originalBodyPad = 0;
 
-            if ( ! $('.modal-box.active') )
-                app.originalBodyPad = app.$body.css('padding-right') || '';
+            if ( ! $('.modal-box.active').length )
+                app.originalBodyPad = parseInt(app.$body.css('padding-right'), 10);
 
             app.scrollbarWidth = app.measureScrollBar();
         };
@@ -85,8 +87,10 @@
                 app.animationDuration($('.inner', app.$el), app.options.closeAnimationDuration);
 
                 app.animate(app.options.closeAnimationEffect, function(){
-                    app.resetScrollBar();
-                    app.$body.removeClass("modal-box-open");
+                    if ( ! $('.modal-box.active').length ) {
+                        app.resetScrollBar();
+                        app.$body.removeClass("modal-box-open");
+                    }
 
                     app.$el.css( 'z-index', -1 );
 
@@ -96,8 +100,10 @@
                 app.$el.stop(true, false).fadeOut( app.options.closeAnimationDuration, function (){
                     app.$el.removeClass("active");
 
-                    app.resetScrollBar();
-                    app.$body.removeClass("modal-box-open");
+                    if ( ! $('.modal-box.active').length ) {
+                        app.resetScrollBar();
+                        app.$body.removeClass("modal-box-open");
+                    }
 
                     app.$el.trigger( "modalBox:afterClose", app );
                 });
@@ -122,8 +128,7 @@
         };
 
         app.setScrollBar = function () {
-            var bodyPad = parseInt(app.originalBodyPad, 10);
-            app.$body.css('padding-right', bodyPad + app.scrollbarWidth);
+            app.$body.css('padding-right', app.originalBodyPad + app.scrollbarWidth);
         };
 
         app.resetScrollBar = function () {
