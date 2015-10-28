@@ -51,6 +51,8 @@
                 app.setScrollBar();
             }
 
+            app.centering();
+
             // SET TAB INDEX
             app.$el.attr( 'tabindex', app.getTabIndex() );
 
@@ -143,6 +145,14 @@
             return width;
         };
 
+        app.centering = function() {
+            if ( app.options.centeringVertical )
+                app.$el.find(".inner").css({
+                    "margin-top": "-" + (app.$el.find(".inner").actual('innerHeight') / 2) + "px",
+                    "top": "50%"
+                });
+        };
+
         app.getTabIndex = function() {
             var tabIndex = 1;
 
@@ -214,6 +224,7 @@
         openAnimationEffect: 'default-in',
         closeAnimationEffect: 'default-out',
         closeOnEscape: true,
+        centeringVertical: false,
         autoClose: false,
         autoCloseDelay: 3000
     };
