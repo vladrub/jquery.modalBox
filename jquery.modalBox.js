@@ -148,7 +148,7 @@
         app.centering = function() {
             if ( app.options.centeringVertical )
                 app.$el.find(".inner").css({
-                    "margin-top": "-" + (app.$el.find(".inner").actual('innerHeight') / 2) + "px",
+                    "margin-top": "-" + (app.$el.find(".inner").height() / 2) + "px",
                     "top": "50%"
                 });
         };
