@@ -205,6 +205,7 @@
             app.$el.data( "modalBox" , app );
         } else {
             app = target;
+            app.options = $.extend({}, app.options, options);
         }
 
         if (action == "open") {
