@@ -146,11 +146,14 @@
         };
 
         app.centering = function() {
-            if ( app.options.centeringVertical )
-                app.$el.find(".inner").css({
-                    "margin-top": "-" + (app.$el.find(".inner").height() / 2) + "px",
-                    "top": "50%"
-                });
+            if ( app.options.centeringVertical ) {
+                if ( $('>.inner', app.$el).outerHeight(true) < $(window).height()  ) {
+                    app.$el.find(".inner").css({
+                        "margin-top": "-" + (app.$el.find(".inner").height() / 2) + "px",
+                        "top": "50%"
+                    });
+                }
+            }
         };
 
         app.getTabIndex = function() {
