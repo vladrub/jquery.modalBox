@@ -17,7 +17,8 @@
             app.options = $.extend({}, $.modalBox.defaultOptions, options);
 
             /* BIND CLOSE BUTTON */
-            app.$el.find(".close").click(function(){
+            app.$el.find(".close").click(function(e){
+                e.preventDefault();
                 app.close();
             });
 
