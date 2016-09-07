@@ -221,6 +221,9 @@
         else if (action == "close") {
             app.close();
         }
+        else if ( action == "center" ) {
+            app.centering();
+        }
     };
 
     $.modalBox.defaultOptions = {
