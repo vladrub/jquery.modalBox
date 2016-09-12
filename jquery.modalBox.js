@@ -150,7 +150,7 @@
             if ( app.options.centeringVertical ) {
                 if ( $('>.inner', app.$el).outerHeight(true) < $(window).height()  ) {
                     app.$el.find(".inner").css({
-                        "margin-top": "-" + (app.$el.find(".inner").height() / 2) + "px",
+                        "margin-top": "-" + (app.$el.find(".inner").innerHeight() / 2) + "px",
                         "top": "50%"
                     });
                 } else {
