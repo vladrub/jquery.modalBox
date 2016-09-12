@@ -153,6 +153,11 @@
                         "margin-top": "-" + (app.$el.find(".inner").height() / 2) + "px",
                         "top": "50%"
                     });
+                } else {
+                    app.$el.find(".inner").css({
+                        "margin-top": false,
+                        "top": false
+                    });
                 }
             }
         };
