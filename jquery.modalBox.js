@@ -149,12 +149,12 @@
         app.centering = function() {
             if ( app.options.centeringVertical ) {
                 if ( $('>.inner', app.$el).outerHeight(true) < $(window).height()  ) {
-                    app.$el.find(".inner").css({
+                    $('>.inner', app.$el).css({
                         "margin-top": "-" + (app.$el.find(".inner").innerHeight() / 2) + "px",
                         "top": "50%"
                     });
                 } else {
-                    app.$el.find(".inner").css({
+                    $('>.inner', app.$el).css({
                         "margin-top": false,
                         "top": false
                     });
