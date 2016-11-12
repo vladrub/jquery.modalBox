@@ -147,19 +147,15 @@
         };
 
         app.centering = function() {
-            if ( app.options.centeringVertical ) {
-                if ( $('>.inner', app.$el).outerHeight(true) < $(window).height()  ) {
-                    $('>.inner', app.$el).css({
+            if ( app.options.centeringVertical )
+                if ( $(window).height() > $('>.inner', app.$el).height()  ) {
+                    app.$el.find(".inner").css({
                         "margin-top": "-" + (app.$el.find(".inner").innerHeight() / 2) + "px",
                         "top": "50%"
                     });
                 } else {
-                    $('>.inner', app.$el).css({
-                        "margin-top": false,
-                        "top": false
-                    });
+                    app.$el.find(".inner").removeAttr('style');
                 }
-            }
         };
 
         app.getTabIndex = function() {
