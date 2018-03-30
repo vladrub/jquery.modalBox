@@ -1,0 +1,14 @@
+{
+  "name": "jquery-modal-box",
+  "version": "1.0.0",
+  "main": "jquery.modalBox.js",
+  "style": "jquery.modalBox.scss",
+  "description": "The modal box for jQuery",
+  "homepage": "https://github.com/vladrub/jquery.modalBox/issues",
+  "repository": "vladrub/jquery.modalBox",
+  "bugs": "https://github.com/vladrub/jquery.modalBox/issues",
+  "license": "MIT",
+  "author": "Vladislav Rubanovich",
+  "devDependencies": {
+  }
+}
