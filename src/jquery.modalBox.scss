@@ -1,9 +1,3 @@
-@import "compass";
-
-// ************************************************************************************
-// MODAL
-// ************************************************************************************
-
 body {
   div.modal-box-scroll-bar {
     position: absolute;
@@ -27,10 +21,8 @@ div.modal-box {
   overflow-x: hidden;
   overflow-y: auto;
   visibility: hidden;
-  @include transition(visibility 0.3s linear 0.5s, opacity 0.5s linear);
+  transition: visibility 0.3s linear 0.5s, opacity 0.3s linear;
   transition-delay: 0s;
-
-  &.active { visibility: visible; opacity: 1; }
 
   &>.inner {
     background: #fbfbfb;
@@ -40,6 +32,7 @@ div.modal-box {
     width: 600px; height: auto;
     box-sizing: border-box;
     position: relative;
+    display: none;
 
     a { color: #101010; }
 
@@ -56,30 +49,33 @@ div.modal-box {
       &.close:hover { opacity: 1; }
     }
 
-    &.default-in {
-      -webkit-animation-name: defaultIn;
-      animation-name: defaultIn;
+    &.show, &.hide {
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+      display: block;
     }
 
-    &.default-out {
-      -webkit-animation-name: defaultOut;
-      animation-name: defaultOut;
+    &.show {
+      animation-name: modalBoxIn;
+    }
+
+    &.hide {
+      animation-name: modalBoxOut;
     }
   }
 
-  &.stylized>.inner {
-    border: 1px solid #dcdee0;
-    border-radius: 5px;
-    @include box-shadow(0 3px 9px rgba(0,0,0,.5));
+  &.active {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
-@keyframes defaultIn {
-  0% { opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); }
-  100% { opacity: 1; -webkit-transform: none; transform: none; }
+@keyframes modalBoxIn {
+  0% { opacity: 0; transform: translate3d(0, -100%, 0); }
+  100% { opacity: 1; transform: none; }
 }
 
-@keyframes defaultOut {
+@keyframes modalBoxOut {
   0% { opacity: 1; }
-  100% { opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); }
+  100% { opacity: 0; transform: translate3d(0, -100%, 0); }
 }

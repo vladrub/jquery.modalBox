@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Boilerplate</title>
+		<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="../dist/jquery.boilerplate.js"></script>
+		<link href="../dist/jquery.modalBox.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="modal-box" id="demo">
+			<div class="inner">
+				<button class="close">&times;</button>
+				Modal 1
+			</div>
+		</div>
+
+		<div class="modal-box" id="demo2">
+			<div class="inner">
+				<button class="close">&times;</button>
+				Modal 2
+			</div>
+		</div>
+
+		<div class="modal-box" id="demo3">
+			<div class="inner">
+				<button class="close">&times;</button>
+				Modal 2
+			</div>
+		</div>
+
+		<a href="#demo" class="show-modal">Show modal</a><br>
+		<a href="#demo" class="show-modal-center">Show modal centered</a><br>
+		<a href="#demo2" class="show-auto-close-modal">Show auto close modal</a><br>
+
+		<a href="#" class="show-many-modals">Show many modals</a>
+
+		<script>
+			$( function() {
+                $('a.show-modal').click(function(e){
+                    e.preventDefault();
+                    $( $(this).attr("href") ).modalBox("open");
+                });
+
+                $('a.show-modal-center').click(function(e){
+                    e.preventDefault();
+                    $( $(this).attr("href") ).modalBox("open", {
+                        centeringVertical: true
+                    });
+                });
+
+                $('a.show-auto-close-modal').click(function(e){
+                    e.preventDefault();
+                    $( $(this).attr("href") ).modalBox("open", {
+                        autoClose: true,
+                        autoCloseDelay: 3000
+                    });
+                });
+
+                $('a.show-many-modals').click(function(e){
+                    e.preventDefault();
+                    $('#demo').modalBox("open");
+
+                    setTimeout(function () {
+                        $('#demo2').modalBox("open");
+                    }, 500);
+
+                    setTimeout(function () {
+                        $('#demo3').modalBox("open");
+                    }, 1000);
+                });
+
+                $('.modal-box').on('modalBox:beforeOpen', function(){
+                    console.log('beforeOpen event');
+                });
+
+                $('.modal-box').on('modalBox:afterOpen', function(){
+                    console.log('afterOpen event');
+                });
+
+                $('.modal-box').on('modalBox:beforeClose', function(){
+                    console.log('beforeClose event');
+                });
+
+                $('.modal-box').on('modalBox:afterClose', function(){
+                    console.log('afterClose event');
+                });
+			} );
+		</script>
+	</body>
+</html>

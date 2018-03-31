@@ -1,0 +1,29 @@
+{
+  "name": "jquery.modalBox",
+  "license": "MIT",
+  "authors": [
+    "Vladislav Rubanovich <vladislavrubanovich@gmail.com>"
+  ],
+  "description": "The light weight modal plugin with css3 animations for jQuery",
+  "homepage": "https://github.com/vladrub/jquery.modalBox/",
+  "keywords": [
+    "browser",
+    "animated",
+    "popup",
+    "modal-box",
+    "modal",
+    "jquery",
+    "css3",
+    "jquery-plugin"
+  ],
+  "main": "dist/jquery.modalBox.js",
+  "style": "dist/jquery.modalBox.css",
+  "dependencies": {
+    "jquery": ">=1.8"
+  },
+  "ignore": [
+    "npm-debug.log",
+    "bower_components",
+    "node_modules"
+  ]
+}
