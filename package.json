@@ -1,5 +1,5 @@
 {
-  "name": "jquery.modalBox",
+  "name": "jquery.modal-box",
   "version": "2.0.0",
   "description": "The light weight modal plugin with css3 animations for jQuery",
   "main": "dist/jquery.modalBox.js",
