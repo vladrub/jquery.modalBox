@@ -10,14 +10,14 @@
         // Global
         factory(jQuery);
     }
-})(function($, window, document, undefined) {
+})(function($) {
     "use strict";
 
     // Create the defaults once
     var pluginName = "modalBox",
         defaults = {
             closeOnEscape: true,
-            centeringVertical: false,
+            centeringVertical: true,
             autoClose: false,
             autoCloseDelay: 3000
         };
@@ -68,7 +68,7 @@
                 });
             }
 
-            this.$el.click(function(e){
+            this.$el.on('mousedown', function(e){
                 if ( $(e.target).closest(".inner").length ) {
                     return;
                 }
@@ -151,7 +151,9 @@
         centering: function () {
             var them = this;
             if ( this.options.centeringVertical ) {
-                if ( $(window).height() > $('>.inner', this.$el).height()  ) {
+                var windowHeight = "innerHeight" in window ? window.innerHeight: document.documentElement.offsetHeight;
+
+                if ( windowHeight > $('>.inner', this.$el).height()  ) {
                     this.$el.find(".inner").css({
                         "margin-top": "-" + (them.$el.find(".inner").innerHeight() / 2) + "px",
                         "top": "50%"
