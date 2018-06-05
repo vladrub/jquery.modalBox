@@ -54,15 +54,15 @@ div.modal-box > .inner button.close {
 div.modal-box > .inner button.close.close:hover {
   opacity: 1;
 }
-div.modal-box > .inner.show, div.modal-box > .inner.hide {
+div.modal-box > .inner.show-modal-content, div.modal-box > .inner.hide-modal-content {
   animation-duration: 0.5s;
   animation-fill-mode: both;
   display: block;
 }
-div.modal-box > .inner.show {
+div.modal-box > .inner.show-modal-content {
   animation-name: modalBoxIn;
 }
-div.modal-box > .inner.hide {
+div.modal-box > .inner.hide-modal-content {
   animation-name: modalBoxOut;
 }
 div.modal-box.active {

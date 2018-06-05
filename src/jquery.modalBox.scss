@@ -49,17 +49,17 @@ div.modal-box {
       &.close:hover { opacity: 1; }
     }
 
-    &.show, &.hide {
+    &.show-modal-content, &.hide-modal-content {
       animation-duration: 0.5s;
       animation-fill-mode: both;
       display: block;
     }
 
-    &.show {
+    &.show-modal-content {
       animation-name: modalBoxIn;
     }
 
-    &.hide {
+    &.hide-modal-content {
       animation-name: modalBoxOut;
     }
   }

@@ -1,5 +1,5 @@
 /*
- *  jquery.modal-box - v2.0.1
+ *  jquery.modal-box - v2.0.2
  *  The light weight modal plugin with css3 animations for jQuery
  *  https://github.com/vladrub/jquery.modalBox/
  *
@@ -113,7 +113,7 @@
 
             this.$el.one('transitionend', function(){
                 $('.inner', them.$el)
-                    .addClass('show')
+                    .addClass('show-modal-content')
                     .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                         them.$el.trigger( "modalBox:afterOpen", them );
                         them.$el.focus();
@@ -125,9 +125,9 @@
             this.$el.trigger( "modalBox:beforeClose", this );
 
             $('.inner', them.$el)
-                .removeClass('show').addClass('hide')
+                .removeClass('show-modal-content').addClass('hide-modal-content')
                 .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $('.inner', them.$el).removeClass('hide');
+                    $('.inner', them.$el).removeClass('hide-modal-content');
 
                     them.$el
                         .removeClass('active')
