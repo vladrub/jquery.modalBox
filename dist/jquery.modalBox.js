@@ -1,5 +1,5 @@
 /*
- *  jquery.modal-box - v2.0.2
+ *  jquery.modal-box - v2.0.3
  *  The light weight modal plugin with css3 animations for jQuery
  *  https://github.com/vladrub/jquery.modalBox/
  *
@@ -26,6 +26,7 @@
         defaults = {
             closeOnEscape: true,
             centeringVertical: true,
+            closable: true,
             autoClose: false,
             autoCloseDelay: 3000
         };
@@ -64,12 +65,18 @@
 
             /* BIND CLOSE BUTTON */
             $(".close", this.$el).click(function(e){
+                if ( ! them.options.closable ) {
+                    return;
+                }
                 e.preventDefault();
                 them.close();
             });
 
             if ( this.options.closeOnEscape ) {
                 $(this.$el).bind('keydown', function(e){
+                    if ( ! them.options.closable ) {
+                        return;
+                    }
                     if (e.keyCode === 27) {
                         them.close();
                     }
@@ -93,6 +100,9 @@
             this.scrollbarWidth = this.measureScrollBar();
         },
         open: function() {
+            if ( this.$el.hasClass('modal-box-animated') ) { return; }
+            this.$el.addClass('modal-box-animated');
+
             var them = this;
             this.$el.trigger( "modalBox:beforeOpen", this );
 
@@ -112,22 +122,27 @@
             this.$el.addClass("active");
 
             this.$el.one('transitionend', function(){
-                $('.inner', them.$el)
-                    .addClass('show-modal-content')
+                $('>.inner', them.$el)
+                    .addClass('show-modal-inner')
                     .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                         them.$el.trigger( "modalBox:afterOpen", them );
                         them.$el.focus();
+
+                        them.$el.removeClass('modal-box-animated');
                     });
             });
         },
         close: function () {
+            if ( this.$el.hasClass('modal-box-animated') ) { return; }
+            this.$el.addClass('modal-box-animated');
+
             var them = this;
             this.$el.trigger( "modalBox:beforeClose", this );
 
-            $('.inner', them.$el)
-                .removeClass('show-modal-content').addClass('hide-modal-content')
+            $('>.inner', them.$el)
+                .removeClass('show-modal-inner').addClass('hide-modal-inner')
                 .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $('.inner', them.$el).removeClass('hide-modal-content');
+                    $('.inner', them.$el).removeClass('hide-modal-inner');
 
                     them.$el
                         .removeClass('active')
@@ -140,6 +155,8 @@
                             them.$el.css( 'z-index', -1 );
 
                             them.$el.trigger( "modalBox:afterClose", them );
+
+                            them.$el.removeClass('modal-box-animated');
                         });
                 });
         },

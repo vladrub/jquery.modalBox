@@ -35,7 +35,7 @@ div.modal-box > .inner {
   height: auto;
   box-sizing: border-box;
   position: relative;
-  display: none;
+  visibility: hidden;
 }
 div.modal-box > .inner a {
   color: #101010;
@@ -54,15 +54,15 @@ div.modal-box > .inner button.close {
 div.modal-box > .inner button.close.close:hover {
   opacity: 1;
 }
-div.modal-box > .inner.show-modal-content, div.modal-box > .inner.hide-modal-content {
+div.modal-box > .inner.show-modal-inner, div.modal-box > .inner.hide-modal-inner {
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  display: block;
+  visibility: visible;
 }
-div.modal-box > .inner.show-modal-content {
+div.modal-box > .inner.show-modal-inner {
   animation-name: modalBoxIn;
 }
-div.modal-box > .inner.hide-modal-content {
+div.modal-box > .inner.hide-modal-inner {
   animation-name: modalBoxOut;
 }
 div.modal-box.active {

@@ -32,7 +32,7 @@ div.modal-box {
     width: 600px; height: auto;
     box-sizing: border-box;
     position: relative;
-    display: none;
+    visibility: hidden;
 
     a { color: #101010; }
 
@@ -49,17 +49,17 @@ div.modal-box {
       &.close:hover { opacity: 1; }
     }
 
-    &.show-modal-content, &.hide-modal-content {
+    &.show-modal-inner, &.hide-modal-inner {
       animation-duration: 0.5s;
       animation-fill-mode: both;
-      display: block;
+      visibility: visible;
     }
 
-    &.show-modal-content {
+    &.show-modal-inner {
       animation-name: modalBoxIn;
     }
 
-    &.hide-modal-content {
+    &.hide-modal-inner {
       animation-name: modalBoxOut;
     }
   }
