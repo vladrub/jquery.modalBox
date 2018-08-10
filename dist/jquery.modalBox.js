@@ -1,5 +1,5 @@
 /*
- *  jquery.modal-box - v2.0.4
+ *  jquery.modal-box - v2.0.5
  *  The light weight modal plugin with css3 animations for jQuery
  *  https://github.com/vladrub/jquery.modalBox/
  *
