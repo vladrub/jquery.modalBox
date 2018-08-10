@@ -11,8 +11,6 @@ body.modal-box-open {
 
 div.modal-box {
   opacity: 0;
-  width: 100%;
-  height: 100%;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -25,17 +23,22 @@ div.modal-box {
   visibility: hidden;
   transition: visibility 0.3s linear 0.5s, opacity 0.3s linear;
   transition-delay: 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
 }
 div.modal-box > .inner {
   background: #fbfbfb;
   color: #101010;
   padding: 25px 35px;
-  margin: 100px auto;
   width: 600px;
   height: auto;
   box-sizing: border-box;
   position: relative;
   visibility: hidden;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 div.modal-box > .inner a {
   color: #101010;

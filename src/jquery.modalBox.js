@@ -17,7 +17,6 @@
     var pluginName = "modalBox",
         defaults = {
             closeOnEscape: true,
-            centeringVertical: true,
             closable: true,
             autoClose: false,
             autoCloseDelay: 3000
@@ -98,12 +97,8 @@
             var them = this;
             this.$el.trigger( "modalBox:beforeOpen", this );
 
-            if ( $('>.inner', this.$el).outerHeight(true) > $(window).height() ) {
-                this.$body.addClass("modal-box-open");
-                this.setScrollBar();
-            }
-
-            this.centering();
+            this.$body.addClass("modal-box-open");
+            this.setScrollBar();
 
             // SET TAB INDEX
             this.$el.attr( 'tabindex', this.getTabIndex() );
@@ -164,21 +159,6 @@
             var width = scroll[0].offsetWidth - scroll[0].clientWidth;
             scroll.remove();
             return width;
-        },
-        centering: function () {
-            var them = this;
-            if ( this.options.centeringVertical ) {
-                var windowHeight = "innerHeight" in window ? window.innerHeight: document.documentElement.offsetHeight;
-
-                if ( windowHeight > $('>.inner', this.$el).height()  ) {
-                    this.$el.find(".inner").css({
-                        "margin-top": "-" + (them.$el.find(".inner").innerHeight() / 2) + "px",
-                        "top": "50%"
-                    });
-                } else {
-                    this.$el.find(".inner").removeAttr('style');
-                }
-            }
         },
         getTabIndex: function () {
             var tabIndex = 1;
