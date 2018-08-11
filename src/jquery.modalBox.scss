@@ -26,6 +26,7 @@ div.modal-box {
   justify-content: center;
   align-items: center;
   padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
 
   &>.inner {
     background: #fbfbfb;
