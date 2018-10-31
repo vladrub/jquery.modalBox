@@ -75,6 +75,9 @@
             }
 
             this.$el.on('mousedown', function(e){
+                if ( ! them.options.closable ) {
+                    return;
+                }
                 if ( $(e.target).closest(".inner").length ) {
                     return;
                 }
